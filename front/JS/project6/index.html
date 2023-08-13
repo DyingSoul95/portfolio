@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title></title>
+
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+</head>
+
+<body>
+
+<ul>
+
+    <li>Введение в JavaScript
+
+        <ul>
+
+            <li>Размещение скриптов на HTML-страницах</li>
+
+            <li>Синтаксис языка</li>
+
+            <li>Типы данных
+
+                <ul>
+
+                    <li>Объект Global</li>
+
+                    <li>Оборачивание (wrapping), изменчивость (mutability)</li>
+
+                    <li>Преобразование типов, основные методы: toString, valueOf</li>
+
+                    <li>Инициализация объектов, массивов и функций</li>
+
+                </ul>
+            </li>
+            <li>Переменные и область видимости</li>
+
+            <li>Операторы языка</li>
+
+            <li>Выражения: условия и циклы</li>
+
+            <li>Операторы перехода (label, break, continue, return)</li>
+
+            <li>Исключения и обработка ошибок: try/catch/finally, throw</li>
+
+        </ul>
+    </li>
+
+    <li>Работа с объектами в JavaScript
+
+        <ul>
+
+            <li>Создание объектов</li>
+
+            <li>Доступ к свойствам: опрос, добавление, удаление и перечисление свойств</li>
+
+            <li>Массивы, методы работы с массивами</li>
+
+            <li>Функции и передача параметров</li>
+
+        </ul>
+    </li>
+
+    <li>JavaScript в браузере
+
+        <ul>
+
+            <li>Очередность выполнения скриптов</li>
+
+            <li>DOM: объектная модель документа
+
+                <ul>
+
+                    <li>Основные объекты браузера, объект Window</li>
+
+                    <li>Объект Document: поиск и работа с элементами</li>
+
+                    <li>Настройка и изменение стилей документа</li>
+
+                    <li>Обработка событий</li>
+
+                    <li>Графика: элемент canvas</li>
+
+                </ul>
+
+            </li>
+
+            <li>Работа с формами: валидация данных, регулярные выражения</li>
+
+        </ul>
+    </li>
+
+</ul>
+
+<button style="font-size: 20px;" onclick="sortUl()">sortUl</button>
+
+<script>
+    function sortUl() {
+        let ul = document.querySelectorAll('ul');
+
+for (let i = 0; i < ul.length; i++) {
+  let li = [...ul[i].children].sort((a, b) => {
+    return a.textContent >= b.textContent ? 1 : -1
+  });
+  ul[i].append( ...li );
+}
+}
+</script>
+
+</body>
+
+</html>

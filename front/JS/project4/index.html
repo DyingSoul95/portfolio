@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+<title>Example</title>
+
+<script>
+    var str = document.getElementsByName("choice");
+
+    function show() {    
+        for (var i = 0; i < str.length; i++) {
+            var number = i + 1;
+            str[i].innerText = "Строка " + number;
+        }     
+    }
+
+    function hide(){
+        for (var i = 0; i < str.length; i++) {
+            str[i].innerText = "";
+        } 
+    }
+
+</script>
+
+</head>
+
+<body>
+
+<div name="choice"></div>
+
+<div name="choice"></div>
+
+<div name="choice"></div>
+
+<div name="choice"></div>
+
+<div name="choice"></div>
+
+<button onclick="show()">Показать текст</button>
+
+<button onClick="hide()">Скрыть текст</button>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>Вы уверены, что хотите удалить весь список дел?</div>
+<form method="post" action="deleteAll">
+  <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+  <button type="submit">Да</button>
+</form>
+<a href="tasks">
+  <button type="submit">Нет
+  </button>
+</a>
+</body>
+</html>

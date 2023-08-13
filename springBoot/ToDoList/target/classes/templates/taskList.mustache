@@ -1,0 +1,56 @@
+<html>
+<body>
+<div>
+  <form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <input type="submit" value="Выход"/>
+  </form>
+</div>
+
+<div>
+  <form method="post" action="addList">
+    <input type="text" name="name" placeholder="Введите название дела"/>
+    <input type="text" name="description" placeholder="Введите описание дела">
+    <input type="text" name="date" placeholder="Введите дату исполнения">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button type="submit">Добавить</button>
+  </form>
+</div>
+
+<div>
+  <form method="post" action="change">
+    <input type="number" name="id" placeholder="Введите id дела"/>
+    <input type="text" name="name" placeholder="Введите название дела">
+    <input type="text" name="description" placeholder="Введите описание дела">
+    <input type="text" name="date" placeholder="Введите дату исполнения">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button type="submit">Изменить дело</button>
+  </form>
+</div>
+
+<div>Поиск дела</div>
+<form method="post" action="filter">
+  <input type="number" name="filter">
+  <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+  <button type="submit">Найти</button>
+</form>
+
+<div>Удаление дела по id(без ввода id удаление всех дел)</div>
+<form method="post" action="delete">
+  <input type="number" name="filter">
+  <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+  <button type="submit">Удалить</button>
+</form>
+
+<div>Список дел</div>
+{{#massages}}
+  <div>
+    <b>{{id}}</b>
+    <span>{{name}}</span>
+    <span>{{description}}</span>
+    <i>{{date}}</i>
+    <strong>{{authorName}}</strong>
+  </div>
+{{/massages}}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>index</title>
+	<script>
+		function search() {
+			var input = document.getElementById("text").value;
+			if(input === "")
+				document.querySelector('iframe').setAttribute('src', 'https://www.google.com');
+			else{
+				input = input.replace(/ /g, "+");
+				input = "https://www.google.com/search?q=" + input;
+				document.querySelector('iframe').setAttribute('src', input);
+			}
+		}
+	</script>
+</head>
+<body>
+	<iframe style="height: 1500px; width: 1200px"></iframe>
+	<div>
+		<input id = "text" type="text" name="search">
+		<button onclick="search()">Поиск</button>
+	</div>
+</body>
+</html>

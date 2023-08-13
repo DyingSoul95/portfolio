@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Универсальный селектор</title>
+
+<style>
+
+body {
+
+margin: 0;
+
+background: #F4F1F8;
+
+}
+
+table {
+
+align: center;
+
+text-align: center;
+
+border-collapse: collapse;
+
+line-height: 1.1;
+
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+color: #black;
+
+}
+
+caption {
+
+font-weight: bold;
+
+font-size: 2em;
+
+text-align: center;
+
+}
+
+th {
+
+padding: 10px;
+
+border: 2px solid #000000;
+
+background:#FFF5EE;
+
+}
+
+td {
+
+font-size: 0.8em;
+
+padding: 5px 7px;
+
+border: 2px solid #000000;
+
+}
+
+.first {
+
+font-size: 1em;
+
+font-weight: bold;
+
+text-align: center;
+
+background: #FFF5EE;
+
+}
+
+tr:nth-child(even){
+	background: #ccfccc;
+}
+tr:nth-child(odd){
+	background: #d3e2f4;
+}
+td:not(.first):hover{
+	background: #f56e6e;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<table>
+
+<caption>Меню</caption>
+
+<tr>
+
+<th rowspan="2" class="first">Кухня</th>
+
+<th colspan="2">Холодные блюда</th>
+
+<th colspan="2">Горячие блюда</th>
+
+<th rowspan="2" >Десерты</th>
+
+</tr>
+
+<tr>
+
+<td class="first">Салаты</td>
+
+<td class="first">Закуски</td>
+
+<td class="first">Первые блюда</td>
+
+<td class="first">Вторые блюда</td>
+
+</tr>
+
+<tr>
+
+<td rowspan="3" class="first">Русская</td>
+
+<td>Винегрет</td>
+
+<td>Язык с хреном</td>
+
+<td>Щи с квашеной капустой</td>
+
+<td>Вареники с картошкой</td>
+
+<td>Печеные яблоки с медом</td>
+
+</tr>
+
+<tr>
+
+<td>Оливье</td>
+
+<td>Студень говяжий</td>
+
+<td>Рассольник домашний</td>
+
+<td>Караси запеченые в сметане</td>
+
+<td>Блинчатый пирог</td>
+
+</tr>
+
+<tr>
+
+<td>Сельдь под "шубой"</td>
+
+<td>Судак заливной</td>
+
+<td>Мясная солянка</td>
+
+<td>Котлеты "Пожарские"</td>
+
+<td>Пирожное "Картошка"</td>
+
+</tr>
+
+<td rowspan="3" class="first">Французская</td>
+
+<td>Вогезский салат</td>
+
+<td>Рийет из курицы</td>
+
+<td>Баклажанный крем-суп "Ренуар"</td>
+
+<td>Картофель огратен</td>
+
+<td>Бриоши</td>
+
+</tr>
+
+<tr>
+
+<td>Салат "Панзанелла"</td>
+
+<td>Делисьез из сыра</td>
+
+<td>Французский тыквенный суп</td>
+
+<td>Гратин из птицы</td>
+
+<td>Лигурийский лимонный пирог</td>
+
+</tr>
+
+<tr>
+
+<td>Тар-тар</td>
+
+<td>Маринованный лосось</td>
+
+<td>Суп "Конти"</td>
+
+<td>Тартифлетт</td>
+
+<td>Саварен "Триумф"</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
